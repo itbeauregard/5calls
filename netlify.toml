@@ -1,0 +1,7 @@
+[Settings]
+ID = "eloquent-swirles-2ba06d"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
