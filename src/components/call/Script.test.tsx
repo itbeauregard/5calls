@@ -112,6 +112,8 @@ describe('getContactNameWithTitle', () => {
         expect(agTitle).toBe('Attorney General Betty White');
         const legTitle = getContactNameWithTitle(contacts, 3);
         expect(legTitle).toBe('Legislator Luna Lovegood');
+    });
+    it('returns just the name of the contact when the title is unknown', () => {
         const unknownTitle = getContactNameWithTitle(contacts, 4);
         expect(unknownTitle).toBe('Lisbeth Salander');
     });
