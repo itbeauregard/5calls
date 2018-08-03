@@ -18,7 +18,19 @@ const locationReg = /\[CITY,\s?ZIP\]|\[CITY,\s?STATE\]/gi;
 
 function getContactNameWithTitle(contacts: Contact[], contactIndex: number) {
   const currentContact = contacts[contactIndex];
-  const title = currentContact.area === 'House' ? 'Rep. ' : 'Senator ';
+  let title = 'Legislator ';
+  switch (currentContact.area) {
+    case 'House':
+    case 'StateLower':
+      title = 'Rep. ';
+      break;
+    case 'Senate':
+    case 'StateUpper':
+      title = 'Senator ';
+      break;
+    default:
+      title = 'Legislator ';
+  }
   return title + currentContact.name;
 }
 
