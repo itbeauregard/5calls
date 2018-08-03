@@ -30,6 +30,15 @@ function getContactNameWithTitle(contacts: Contact[], contactIndex: number) {
     case 'StateUpper':
       title = 'Legislator ';
       break;
+    case 'Governor':
+      title = 'Governor ';
+      break;
+    case 'AttorneyGeneral':
+      title = 'Attorney General ';
+      break; 
+    case 'SecretaryOfState':
+      title = 'Secretary of State ';
+      break;  
     default:
       title = '';
   }
