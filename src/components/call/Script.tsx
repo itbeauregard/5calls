@@ -76,3 +76,5 @@ export const Script: React.StatelessComponent<Props> = ({ issue, contactIndex = 
 };
 
 export const ScriptTranslatable = translate()(Script);
+
+export { getContactNameWithTitle };
