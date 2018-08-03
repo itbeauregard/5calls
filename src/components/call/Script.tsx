@@ -21,12 +21,14 @@ function getContactNameWithTitle(contacts: Contact[], contactIndex: number) {
   let title = '';
   switch (currentContact.area) {
     case 'House':
-    case 'StateLower':
       title = 'Rep. ';
       break;
     case 'Senate':
-    case 'StateUpper':
       title = 'Senator ';
+      break;
+    case 'StateLower':
+    case 'StateUpper':
+      title = 'Legislator ';
       break;
     default:
       title = '';
